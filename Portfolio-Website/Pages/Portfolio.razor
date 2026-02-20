@@ -1,0 +1,54 @@
+﻿@page "/"
+@layout PortfolioLayout
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager NavigationManager
+@inject PortfolioService PortfolioService
+
+<!-- Page Title -->
+<PageTitle>Michael Hense - Portfolio</PageTitle>
+
+<!-- HERO -->
+<section class="hero">
+
+    <img src="images/hero.jpg" class="hero-image" />
+
+    <div class="hero-overlay">
+        <h1>Michael Hense</h1>
+        <p>3D Character Artist</p>
+    </div>
+
+</section>
+
+
+<!-- GRID -->
+<main class="container">
+
+    <div class="grid">
+
+        @foreach (PortfolioPiece piece in PortfolioService.GetPortfolio())
+        {
+            <div class="card" @onclick="() => OpenPiece(piece)">
+
+                <img src="@piece.Image" />
+
+                <div class="card-info">
+                    <div class="title">@piece.Title</div>
+                    <div class="subtitle">@piece.Category</div>
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+</main>
+
+@code {
+
+    void OpenPiece(PortfolioPiece piece)
+    {
+        Console.WriteLine($"Opening {piece.Title}");
+        // later navigate to detail page
+    }
+
+}

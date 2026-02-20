@@ -1,0 +1,27 @@
+﻿@inherits LayoutComponentBase
+
+<div class="navbar">
+    <div class="logo">Michael Hense</div>
+
+    <nav>
+        <NavLink href="/">Portfolio</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/contact">Contact</NavLink>
+    </nav>
+</div>
+
+<div class="main-content">
+    @Body
+</div>
+
+<footer class="footer-content">
+    <div>
+        © @DateTime.Now.Year Michael Hense
+    </div>
+
+    <div class="footer-links">
+        <a href="#">ArtStation</a>
+        <a href="#">Sketchfab</a>
+        <a href="#">LinkedIn</a>
+    </div>
+</footer>

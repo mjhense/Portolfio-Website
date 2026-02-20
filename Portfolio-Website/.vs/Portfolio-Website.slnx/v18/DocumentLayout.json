@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|c:\\users\\michael\\documents\\projects\\websites\\portfolio site\\portolfio-website\\portfolio-website\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|c:\\users\\michael\\documents\\projects\\websites\\portfolio site\\portolfio-website\\portfolio-website\\shared\\detailpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|solutionrelative:shared\\detailpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|c:\\users\\michael\\documents\\projects\\websites\\portfolio site\\portolfio-website\\portfolio-website\\wwwroot\\css\\detailpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|solutionrelative:wwwroot\\css\\detailpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "detailpage.css",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\wwwroot\\css\\detailpage.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\detailpage.css",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\wwwroot\\css\\detailpage.css",
+              "RelativeToolTip": "wwwroot\\css\\detailpage.css",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv2oAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-20T18:42:33.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\Pages\\Home.razor",
-              "RelativeToolTip": "Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "DetailPage.razor",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\Shared\\DetailPage.razor",
+              "RelativeDocumentMoniker": "Shared\\DetailPage.razor",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\Shared\\DetailPage.razor",
+              "RelativeToolTip": "Shared\\DetailPage.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-20T05:51:42.616Z",
+              "WhenOpened": "2026-02-20T18:37:49.162Z",
               "EditorCaption": ""
             }
           ]

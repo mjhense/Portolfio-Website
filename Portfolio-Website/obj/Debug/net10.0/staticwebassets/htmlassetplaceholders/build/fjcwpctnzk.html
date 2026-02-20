@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Hense-Portfolio</title>
     <base href="/" />
-    <link href="_framework/dotnet.6h8mfjzow2.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-lmCown0PXBbVG3CqLHvNItPypmcjw2B8q3S46jDppjo=" />
+    <link href="_framework/dotnet.3mel4zp6oq.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-xcKn/PO3q9+c30fkPlEbfBrvbghavwGRHQxm6ISIpEo=" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="css/portfolio.css" rel="stylesheet" />
+    <link href="css/notfound.css" rel="stylesheet" />
+    <link href="css/detailpage.css" rel="stylesheet" />
     <script type="importmap">{
   "imports": {
     "./_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.lib.module.js": "./_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.99zm1jdh75.lib.module.js",
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.6h8mfjzow2.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.3mel4zp6oq.js",
     "./_framework/dotnet.native.js": "./_framework/dotnet.native.69poregybn.js",
     "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.q5rqv3xrhm.js",
     "./lib/bootstrap/dist/js/bootstrap.js": "./lib/bootstrap/dist/js/bootstrap.5l9eq3ia4i.js",
@@ -30,8 +32,8 @@
     "./_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.lib.module.js": "sha256-A8e6zZwhOqf7lDQqbbCYcAUv4wGE9aQxOo4WyYxR//0=",
     "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
     "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
-    "./_framework/dotnet.6h8mfjzow2.js": "sha256-lmCown0PXBbVG3CqLHvNItPypmcjw2B8q3S46jDppjo=",
-    "./_framework/dotnet.js": "sha256-lmCown0PXBbVG3CqLHvNItPypmcjw2B8q3S46jDppjo=",
+    "./_framework/dotnet.3mel4zp6oq.js": "sha256-xcKn/PO3q9+c30fkPlEbfBrvbghavwGRHQxm6ISIpEo=",
+    "./_framework/dotnet.js": "sha256-xcKn/PO3q9+c30fkPlEbfBrvbghavwGRHQxm6ISIpEo=",
     "./_framework/dotnet.native.69poregybn.js": "sha256-JvdIvkSF0x6euoPT2QnQSMg2Gyv2oJbFeBi1XmWLYFU=",
     "./_framework/dotnet.native.js": "sha256-JvdIvkSF0x6euoPT2QnQSMg2Gyv2oJbFeBi1XmWLYFU=",
     "./_framework/dotnet.runtime.js": "sha256-ArknccFM1sHNVcih0x1h52AG+abNCoQjl6BlVrv3ePw=",
@@ -55,6 +57,15 @@
 <body>
     <div id="app"></div>
     <script src="_framework/blazor.webassembly.66stpp682q.js"></script>
+    <script>
+        window.viewerKeyListener = () => {
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    document.dispatchEvent(new CustomEvent("closeViewer"));
+                }
+            });
+        };
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,160 @@
+﻿@page "/portfolio/{Id}"
+@inject IJSRuntime JS
+@inject PortfolioService PortfolioService
+@inject NavigationManager Navigation
+
+<PageTitle>@Piece?.Title</PageTitle>
+
+@if (Piece == null)
+{
+    <div class="container">
+        <h2>Project not found</h2>
+    </div>
+}
+else
+{
+    <!-- HERO -->
+    <section class="project-hero">
+        <img src="@Piece.Images[0]" />
+        <h1>@imageIndex</h1>
+    </section>
+
+    <!-- TITLE BAR -->
+    <section class="project-header container">
+        <div class="project-title-area">
+            <h1>@Piece.Title</h1>
+            <div class="project-meta">
+                <span>@Piece.Category</span>
+                <span>•</span>
+                <span>Michael Hense</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="project-body container">
+
+        <!-- LEFT: GALLERY -->
+        <div class="project-gallery">
+
+            @for (int i = 0; i < Piece.Images.Count; i++)
+            {
+        @imageIndex = i;
+                <img src="@Piece.Images[i]"
+                     class="gallery-image"
+                     @onclick="(() => OpenViewer(i))" />
+            }
+
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <aside class="project-sidebar">
+
+            <div class="sidebar-section">
+                <h3>Project Info</h3>
+
+                <div class="info-row">
+                    <span class="label">Artist</span>
+                    <span>Michael Hense</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Category</span>
+                    <span>@Piece.Category</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Software</span>
+                    <span>Blender, Substance Painter, ZBrush</span>
+                </div>
+            </div>
+
+
+            <!-- DESCRIPTION -->
+            <section class="project-description container">
+
+                <h2>Description</h2>
+
+                <p>
+                    @Piece.Description
+                </p>
+
+            </section>
+        </aside>
+
+    </section>
+
+    @if (IsViewerOpen)
+    {
+        <div class="viewer-overlay" @onclick="CloseViewer">
+
+            <div class="viewer-content" @onclick:stopPropagation="true">
+
+                <button class="viewer-close" @onclick="CloseViewer">✕</button>
+
+                <button class="viewer-nav left" @onclick="PrevImage">‹</button>
+
+                <img src="@Piece.Images[CurrentImageIndex]" class="viewer-image" />
+
+                <button class="viewer-nav right" @onclick="NextImage">›</button>
+
+            </div>
+        </div>
+    }
+}
+
+@code {
+
+    [Parameter]
+    public required string ID { get; set; }
+    [Parameter]
+    public required PortfolioPiece Piece { get; set; }
+
+    bool IsViewerOpen = false;
+    int CurrentImageIndex = 0;
+
+    private int imageIndex = 0;
+
+    protected override void OnInitialized()
+    {
+        Piece = PortfolioService.GetHighlightPieceById(ID);
+    }
+
+    void OpenViewer(int index)
+    {
+        CurrentImageIndex = index;
+        IsViewerOpen = true;
+    }
+
+    void CloseViewer()
+    {
+        IsViewerOpen = false;
+    }
+
+    void NextImage()
+    {
+        CurrentImageIndex++;
+        if (CurrentImageIndex >= Piece.Images.Count)
+            CurrentImageIndex = 0;
+    }
+
+    void PrevImage()
+    {
+        CurrentImageIndex--;
+        if (CurrentImageIndex < 0)
+            CurrentImageIndex = Piece.Images.Count - 1;
+    }
+
+    void GoBack()
+    {
+        Navigation.NavigateTo("/home");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("viewerKeyListener");
+        }
+    }
+}

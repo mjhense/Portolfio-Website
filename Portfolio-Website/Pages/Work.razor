@@ -1,0 +1,26 @@
+﻿@page "/work"
+@inject PortfolioService PortfolioService
+@inject NavigationManager NavigationManager
+
+
+<!-- Page Title -->
+<PageTitle>Work</PageTitle>
+
+<!-- GRID -->
+<div class="grid">
+    @foreach (PortfolioPiece piece in PortfolioService.GetPortfolio())
+    {
+        <PortfolioCard ImageUrl="@piece.Images[0]"
+                       Title="@piece.Title"
+                       Subtitle="@piece.Category"
+                       OnClick="@(() => OpenProject(piece.ID))" />
+    }
+</div>
+
+@code {
+    void OpenProject(string projectName)
+    {
+        // Navigate to project page or show modal
+        Console.WriteLine($"Opening {projectName}");
+    }
+}

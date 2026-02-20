@@ -11,11 +11,11 @@
 <!-- HERO -->
 <section class="hero">
 
-    <img src="images/hero.jpg" class="hero-image" />
+    <img src="images/hero.png" class="hero-image" />
 
     <div class="hero-overlay">
         <h1>Michael Hense</h1>
-        <p>3D Character Artist</p>
+        <p>3D Artist</p>
     </div>
 
 </section>
@@ -23,15 +23,14 @@
 
 <!-- GRID -->
 <main class="container">
-
     <div class="grid">
 
-        @foreach (PortfolioPiece piece in PortfolioService.GetPortfolio())
+        @foreach (PortfolioPiece highlight in PortfolioService.GetHighlightPieces())
         {
-            <PortfolioCard ImageUrl=@piece.Image
-                           Title=@piece.Title
-                           Subtitle=@piece.Category 
-                           OnClick="@(() => OpenPiece(piece))" />
+            <PortfolioCard ImageUrl=@highlight.Images[0]
+                           Title=@highlight.Title
+                           Subtitle=@highlight.Category
+                           OnClick="@(() => OpenPiece(highlight))" />
         }
 
     </div>
@@ -42,9 +41,7 @@
 
     void OpenPiece(PortfolioPiece piece)
     {
-        Console.WriteLine($"Opening {piece.Title}");
-        NavigationManager.NavigateTo("portfolio-card-test");
-        // later navigate to detail page
+        NavigationManager.NavigateTo($"/portfolio/{piece.ID}");
     }
 
 }

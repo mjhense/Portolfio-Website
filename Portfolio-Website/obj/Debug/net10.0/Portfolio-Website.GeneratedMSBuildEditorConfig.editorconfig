@@ -48,8 +48,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90IEZvdW5kLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Michael/Documents/Projects/Websites/Portfolio Site/Portolfio-Website/Portfolio-Website/Pages/PortfolioCardTest.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9ydGZvbGlvQ2FyZFRlc3QucmF6b3I=
+[C:/Users/Michael/Documents/Projects/Websites/Portfolio Site/Portolfio-Website/Portfolio-Website/Pages/Work.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29yay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Michael/Documents/Projects/Websites/Portfolio Site/Portolfio-Website/Portfolio-Website/Shared/DetailPage.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXERldGFpbFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Michael/Documents/Projects/Websites/Portfolio Site/Portolfio-Website/Portfolio-Website/Shared/Index.razor]
@@ -58,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Michael/Documents/Projects/Websites/Portfolio Site/Portolfio-Website/Portfolio-Website/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Michael/Documents/Projects/Websites/Portfolio Site/Portolfio-Website/Portfolio-Website/Shared/NotFoundPage.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5vdEZvdW5kUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Michael/Documents/Projects/Websites/Portfolio Site/Portolfio-Website/Portfolio-Website/Shared/PortfolioCard.razor]

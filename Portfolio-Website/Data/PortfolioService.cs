@@ -15,6 +15,7 @@ namespace Portfolio_Website.Data
             LoadSampleData();
         }
 
+        #region Portfolio Management Methods
         public List<PortfolioPiece> GetPortfolio()
         {
             return portfolioPieces;
@@ -43,6 +44,7 @@ namespace Portfolio_Website.Data
         {
             portfolioPieces.Clear();
         }
+        #endregion
 
         public void LoadSampleData()
         {
@@ -52,7 +54,7 @@ namespace Portfolio_Website.Data
                 {
                     Title = "Cyberpunk Character",
                     Category = "Character Art",
-                    Image = "images/work1.jpg"
+                    Image = "icon-192.png"
                 },
 
                 new PortfolioPiece
@@ -78,6 +80,7 @@ namespace Portfolio_Website.Data
             };
         }
 
+        #region Loading and Saving Methods
         public void SavePortfolio()
         {
             // Implement logic to save portfolio data to a file or database
@@ -87,5 +90,6 @@ namespace Portfolio_Website.Data
         {
             // Implement logic to load portfolio data from a file or database
         }
+        #endregion
     }
 }

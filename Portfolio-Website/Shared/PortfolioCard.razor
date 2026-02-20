@@ -1,0 +1,20 @@
+﻿<div class="card" @onclick="HandleClick">
+    <img src="@ImageUrl" alt="@Title" />
+    <div class="card-overlay">
+        <h3 class="title">@Title</h3>
+        <p class="subtitle">@Subtitle</p>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string ImageUrl { get; set; } = "https://via.placeholder.com/400x250";
+    [Parameter] public string Title { get; set; } = "Project Title";
+    [Parameter] public string Subtitle { get; set; } = "Short description";
+    [Parameter] public EventCallback OnClick { get; set; }
+
+    private async Task HandleClick()
+    {
+        if (OnClick.HasDelegate)
+            await OnClick.InvokeAsync();
+    }
+}

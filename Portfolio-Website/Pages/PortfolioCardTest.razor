@@ -1,0 +1,26 @@
+﻿@page "/portfolio-card-test"
+
+<div class="grid">
+    <PortfolioCard ImageUrl="icon-192.png"
+                   Title="3D Spaceship"
+                   Subtitle="Sci-Fi Concept Art"
+                   OnClick="@(() => OpenProject("spaceship"))" />
+
+    <PortfolioCard ImageUrl="images/project2.jpg"
+                   Title="Character Model"
+                   Subtitle="High-poly sculpt"
+                   OnClick="@(() => OpenProject("character"))" />
+
+    <PortfolioCard ImageUrl="images/project3.jpg"
+                   Title="Environment Scene"
+                   Subtitle="Fantasy landscape"
+                   OnClick="@(() => OpenProject("environment"))" />
+</div>
+
+@code {
+    void OpenProject(string projectName)
+    {
+        // Navigate to project page or show modal
+        Console.WriteLine($"Opening {projectName}");
+    }
+}

@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\",
+  "WorkspaceRootPath": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|c:\\users\\instructor\\documents\\visual studio\\projects\\portfolio\\portolfio-website\\portfolio-website\\wwwroot\\css\\portfolio.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|solutionrelative:wwwroot\\css\\portfolio.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|c:\\users\\instructor\\documents\\visual studio\\projects\\portfolio\\portolfio-website\\portfolio-website\\shared\\portfoliolayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|solutionrelative:shared\\portfoliolayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|c:\\users\\instructor\\documents\\visual studio\\projects\\portfolio\\portolfio-website\\portfolio-website\\pages\\portfolio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|solutionrelative:pages\\portfolio.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|c:\\users\\instructor\\documents\\visual studio\\projects\\portfolio\\portolfio-website\\portfolio-website\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|c:\\users\\instructor\\documents\\visual studio\\projects\\portfolio\\portolfio-website\\portfolio-website\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|c:\\users\\instructor\\documents\\visual studio\\projects\\portfolio\\portolfio-website\\portfolio-website\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{031C3227-90CC-4E56-8E1A-4059DF732EDF}|Portfolio-Website.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|c:\\users\\michael\\documents\\projects\\websites\\portfolio site\\portolfio-website\\portfolio-website\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{719DD4FD-9522-1E05-C6E9-57D10F4D2DB0}|Portfolio-Website.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,79 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "portfolio.css",
-              "DocumentMoniker": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\wwwroot\\css\\portfolio.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\portfolio.css",
-              "ToolTip": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\wwwroot\\css\\portfolio.css",
-              "RelativeToolTip": "wwwroot\\css\\portfolio.css",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAowIEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-02-20T02:43:03.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Portfolio.razor",
-              "DocumentMoniker": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\Pages\\Portfolio.razor",
-              "RelativeDocumentMoniker": "Pages\\Portfolio.razor",
-              "ToolTip": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\Pages\\Portfolio.razor",
-              "RelativeToolTip": "Pages\\Portfolio.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAHAAAAAAAAAA==",
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\Projects\\Websites\\Portfolio Site\\Portolfio-Website\\Portfolio-Website\\Pages\\Home.razor",
+              "RelativeToolTip": "Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-20T02:32:40.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\_Imports.razor",
-              "RelativeDocumentMoniker": "_Imports.razor",
-              "ToolTip": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\_Imports.razor",
-              "RelativeToolTip": "_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-20T02:31:59.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\App.razor",
-              "RelativeDocumentMoniker": "App.razor",
-              "ToolTip": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\App.razor",
-              "RelativeToolTip": "App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-20T02:31:37.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "wwwroot\\index.html",
-              "ToolTip": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\wwwroot\\index.html",
-              "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-02-20T02:31:15.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PortfolioLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\Shared\\PortfolioLayout.razor",
-              "RelativeDocumentMoniker": "Shared\\PortfolioLayout.razor",
-              "ToolTip": "C:\\Users\\Instructor\\Documents\\Visual Studio\\Projects\\Portfolio\\Portolfio-Website\\Portfolio-Website\\Shared\\PortfolioLayout.razor",
-              "RelativeToolTip": "Shared\\PortfolioLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-20T02:30:56.554Z",
+              "WhenOpened": "2026-02-20T05:51:42.616Z",
               "EditorCaption": ""
             }
           ]

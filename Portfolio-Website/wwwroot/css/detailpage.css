@@ -39,6 +39,10 @@
 }
 
 /* GALLERY */
+.project-gallery {
+    min-width: 0;
+}
+
 .project-gallery img {
     width: 100%;
     border-radius: 6px;
@@ -51,13 +55,33 @@
 .project-sidebar {
     position: sticky;
     top: 100px;
-    height: fit-content;
+    height: calc(100vh - 120px); /* full viewport minus navbar spacing */
+    overflow-y: auto;
+    min-width: 0;
+    padding-right: 8px; /* prevents scrollbar overlap */
 }
 
 .sidebar-section {
     background: #395B64;
     padding: 20px;
     border-radius: 8px;
+}
+
+.project-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-sidebar::-webkit-scrollbar-thumb {
+    background: #395B64;
+    border-radius: 4px;
+}
+
+.project-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #A5C9CA;
 }
 
 .info-row {
@@ -71,14 +95,14 @@
 }
 
 /* DESCRIPTION */
-.project-description {
-    margin-top: 40px;
-    max-width: 900px;
+.project-description p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
-    .project-description h2 {
-        margin-bottom: 10px;
-    }
+.project-description h2 {
+    margin-bottom: 10px;
+}
 
 /* BACK BUTTON */
 .back-button {
@@ -94,17 +118,25 @@
 .viewer-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5000;
-    visibility: hidden;
+    z-index: 9999;
+    transition: background 0.25s ease;
 }
 
-    .viewer-overlay.show {
-        visibility: visible;
-    }
+.viewer-overlay.open {
+    background: rgba(0,0,0,0.95);
+}
+
+.viewer-overlay.closing {
+    background: rgba(0,0,0,0);
+}
+
+.viewer-overlay.show {
+    visibility: visible;
+}
 
 .viewer-content {
     position: relative;
@@ -113,9 +145,21 @@
 }
 
 .viewer-image {
-    max-width: 100%;
-    max-height: 90vh;
-    object-fit: contain;
+    max-width: 95%;
+    max-height: 95%;
+    transform: scale(0.92);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.viewer-image.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.viewer-image.closing {
+    transform: scale(0.92);
+    opacity: 0;
 }
 
 .viewer-close {

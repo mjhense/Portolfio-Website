@@ -1,4 +1,6 @@
 ﻿@page "/portfolio/{Id}"
+
+@inherits MainLayout
 @inject IJSRuntime JS
 @inject PortfolioService PortfolioService
 @inject NavigationManager Navigation
@@ -16,7 +18,6 @@ else
     <!-- HERO -->
     <section class="project-hero">
         <img src="@Piece.Images[0]" />
-        <h1>@imageIndex</h1>
     </section>
 
     <!-- TITLE BAR -->
@@ -36,15 +37,13 @@ else
 
         <!-- LEFT: GALLERY -->
         <div class="project-gallery">
-
             @for (int i = 0; i < Piece.Images.Count; i++)
             {
-        @imageIndex = i;
-                <img src="@Piece.Images[i]"
-                     class="gallery-image"
-                     @onclick="(() => OpenViewer(i))" />
-            }
+                var index = i;
 
+                <img src="@Piece.Images[index]"
+                     @onclick="() => OpenViewer(index)" />
+            }
         </div>
 
         <!-- RIGHT: SIDEBAR -->
@@ -84,9 +83,13 @@ else
 
     </section>
 
-    @if (IsViewerOpen)
+    @if (isViewerVisible)
     {
-        <div class="viewer-overlay" @onclick="CloseViewer">
+        <div class="viewer-overlay @(IsViewerOpen ? "open" : "closing")"
+             tabindex="0"
+             @onkeydown="HandleKeyDown"
+             @onclick="HandleOverlayClick"
+             @ref="viewerElement">
 
             <div class="viewer-content" @onclick:stopPropagation="true">
 
@@ -94,7 +97,8 @@ else
 
                 <button class="viewer-nav left" @onclick="PrevImage">‹</button>
 
-                <img src="@Piece.Images[CurrentImageIndex]" class="viewer-image" />
+                <img src="@Piece.Images[CurrentImageIndex]"
+                     class="viewer-image @(IsViewerOpen ? "open" : "closing")" />
 
                 <button class="viewer-nav right" @onclick="NextImage">›</button>
 
@@ -111,36 +115,62 @@ else
     public required PortfolioPiece Piece { get; set; }
 
     bool IsViewerOpen = false;
+    bool isViewerVisible = false;
     int CurrentImageIndex = 0;
-
-    private int imageIndex = 0;
+    ElementReference viewerElement;
 
     protected override void OnInitialized()
     {
         Piece = PortfolioService.GetHighlightPieceById(ID);
+        if (Piece.Images.Count == 0 && !string.IsNullOrEmpty(Piece.Image))
+        {
+            Piece.Images.Add(Piece.Image);
+        }
     }
 
-    void OpenViewer(int index)
+    async Task OpenViewer(int index)
     {
         CurrentImageIndex = index;
+
+        isViewerVisible = true;
+        StateHasChanged();
+
+        await Task.Delay(10);
+
         IsViewerOpen = true;
+
+        await viewerElement.FocusAsync();
     }
 
-    void CloseViewer()
+    async Task CloseViewer()
     {
         IsViewerOpen = false;
+
+        await Task.Delay(250); // match CSS animation time
+
+        isViewerVisible = false;
+    }
+
+    void HandleOverlayClick()
+    {
+        _ = CloseViewer();
     }
 
     void NextImage()
     {
-        CurrentImageIndex++;
-        if (CurrentImageIndex >= Piece.Images.Count)
-            CurrentImageIndex = 0;
+        if (Piece?.Images == null || Piece.Images.Count == 0)
+            return;
+
+        CurrentImageIndex = (CurrentImageIndex + 1) % Piece.Images.Count;
     }
 
     void PrevImage()
     {
+        if (Piece?.Images == null || Piece.Images.Count == 0)
+            return;
+
         CurrentImageIndex--;
+
         if (CurrentImageIndex < 0)
             CurrentImageIndex = Piece.Images.Count - 1;
     }
@@ -152,9 +182,27 @@ else
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        if (IsViewerOpen)
         {
-            await JS.InvokeVoidAsync("viewerKeyListener");
+            await viewerElement.FocusAsync();
+        }
+    }
+
+    void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            _ = CloseViewer();
+        }
+
+        if (e.Key == "ArrowRight")
+        {
+            NextImage();
+        }
+
+        if (e.Key == "ArrowLeft")
+        {
+            PrevImage();
         }
     }
 }

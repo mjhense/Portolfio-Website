@@ -1,3 +1,4 @@
+wwwroot\css\detailpage.css
 wwwroot\css\notfound.css
 wwwroot\css\portfolio.css
 wwwroot\favicon.png
@@ -50,7 +51,7 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-wwwroot\css\detailpage.css
+C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\css\detailpage.css
 C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\css\notfound.css
 C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\css\portfolio.css
 C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -97,4 +98,3 @@ C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Po
 C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-C:\Users\Michael\Documents\Projects\Websites\Portfolio Site\Portolfio-Website\Portfolio-Website\wwwroot\css\detailpage.css
